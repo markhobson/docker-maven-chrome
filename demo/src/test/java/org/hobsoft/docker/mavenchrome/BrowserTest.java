@@ -19,6 +19,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
@@ -26,7 +27,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Tests that Selenium can run on Chrome.
  */
-public class BrowserIT
+public class BrowserTest
 {
 	// ----------------------------------------------------------------------------------------------------------------
 	// fields
@@ -41,7 +42,10 @@ public class BrowserIT
 	@Before
 	public void setUp()
 	{
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");
+		
+		driver = new ChromeDriver(options);
 	}
 	
 	@After

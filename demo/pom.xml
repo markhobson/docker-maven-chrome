@@ -33,20 +33,6 @@
 	
 	<build>
 		
-		<pluginManagement>
-			
-			<plugins>
-				
-				<plugin>
-					<groupId>com.github.zetten</groupId>
-					<artifactId>xvfb-maven-plugin</artifactId>
-					<version>1.4.0</version>
-				</plugin>
-				
-			</plugins>
-			
-		</pluginManagement>
-		
 		<plugins>
 			
 			<plugin>
@@ -56,39 +42,6 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
-			
-			<plugin>
-				<groupId>com.github.zetten</groupId>
-				<artifactId>xvfb-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>xvfb</id>
-						<goals>
-							<goal>run</goal>
-							<goal>stop</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<configuration>
-					<environmentVariables>
-						<DISPLAY>${xvfb.display}</DISPLAY>
-					</environmentVariables>
-				</configuration>
-				<executions>
-					<execution>
-						<id>integration-test</id>
-						<goals>
-							<goal>integration-test</goal>
-							<goal>verify</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			
 		</plugins>
