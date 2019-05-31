@@ -18,7 +18,7 @@ The following Docker tags are available:
 * `latest` [(jdk-8/Dockerfile)](jdk-8/Dockerfile)
 * `jdk-11` [(jdk-11/Dockerfile)](jdk-11/Dockerfile)
 
-See issue #11 to improve these tags.
+See issue [#11](https://github.com/markhobson/docker-maven-chrome/issues/11) to improve these tags.
 
 ## Demo
 
