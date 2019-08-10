@@ -4,7 +4,7 @@ Docker image for Java automated UI tests.
 
 Includes:
 
-* JDK 8/11
+* JDK 8/11/12
 * Maven 3.6.1
 * Chrome (latest)
 * ChromeDriver 76
@@ -17,6 +17,7 @@ The following Docker tags are available:
 
 * `latest` [(jdk-8/Dockerfile)](jdk-8/Dockerfile)
 * `jdk-11` [(jdk-11/Dockerfile)](jdk-11/Dockerfile)
+* `jdk-12` [(jdk-12/Dockerfile)](jdk-12/Dockerfile)
 
 See issue [#11](https://github.com/markhobson/docker-maven-chrome/issues/11) to improve these tags.
 
