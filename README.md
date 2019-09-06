@@ -36,3 +36,10 @@ exports.config = {
   chromeDriver: '/usr/bin/chromedriver'
 }
 ```
+
+### Chrome crashes
+
+Chrome uses `/dev/shm` for runtime data which is 64MB by default under Docker. If this is not sufficient then this can cause [Chrome to crash](https://bugs.chromium.org/p/chromium/issues/detail?id=522853). Fix by either:
+
+* Increase the size of `/dev/shm` (or mount it to the host's)
+* Start Chrome with the flag `--disable-dev-shm-usage`
