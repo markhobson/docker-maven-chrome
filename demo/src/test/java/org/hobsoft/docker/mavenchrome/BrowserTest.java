@@ -59,10 +59,11 @@ public class BrowserTest
 	// ----------------------------------------------------------------------------------------------------------------
 	
 	@Test
-	public void canGoogle()
+	public void canDuck()
 	{
-		driver.get("https://www.google.com/ncr");
-		driver.findElement(By.name("q")).sendKeys("fish\n");
+		driver.get("https://duckduckgo.com/");
+		driver.findElement(By.id("search_form_input_homepage")).sendKeys("fish");
+		driver.findElement(By.id("search_button_homepage")).click();
 		
 		assertThat(driver.getTitle(), containsString("fish"));
 	}
