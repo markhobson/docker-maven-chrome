@@ -1,4 +1,4 @@
-FROM maven:3.6.1-jdk-12
+FROM maven:3.6.2-jdk-12
 
 # Google Chrome
 
