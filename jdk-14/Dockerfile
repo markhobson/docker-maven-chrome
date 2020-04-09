@@ -9,7 +9,7 @@ RUN yum install -y google-chrome-stable-$CHROME_VERSION \
 
 # ChromeDriver
 
-ARG CHROME_DRIVER_VERSION=80.0.3987.106
+ARG CHROME_DRIVER_VERSION=83.0.4103.39
 RUN yum install -y unzip \
 	&& curl -s -o /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
