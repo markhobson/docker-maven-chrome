@@ -23,7 +23,12 @@ See issue [#11](https://github.com/markhobson/docker-maven-chrome/issues/11) to 
 
 ## Demo
 
-See the [demo](demo) Maven project to see how this Docker image can be used to run UI tests. The [run.sh](demo/run.sh) script builds the project within the latest version of this image on Docker Hub.
+See the [demo](demo) Maven project to see how this Docker image can be used to run UI tests. To run the demo within the latest version of this image on Docker Hub:
+
+```bash
+cd demo
+./run.sh
+```
 
 ## Tips
 
