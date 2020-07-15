@@ -2,7 +2,7 @@ FROM maven:3.6.3-jdk-14
 
 # Google Chrome
 
-ARG CHROME_VERSION=83.0.4103.61-1
+ARG CHROME_VERSION=84.0.4147.89-1
 ADD google-chrome.repo /etc/yum.repos.d/google-chrome.repo
 RUN yum-config-manager --enable ol7_optional_latest \
 	&& yum install -y google-chrome-stable-$CHROME_VERSION \
