@@ -32,6 +32,15 @@ cd demo
 
 ## Tips
 
+### Using with Selenium
+
+Configure [Selenium](https://www.selenium.dev/) to launch Chrome in headless mode:
+
+```java
+ChromeOptions options = new ChromeOptions().setHeadless(true);
+WebDriver driver = new ChromeDriver(options);
+```
+
 ### Configure Protractor to use bundled ChromeDriver
 
 To configure [Protractor](https://www.protractortest.org/) to use the version of ChromeDriver bundled in this image, set [`chromeDriver`](https://github.com/angular/protractor/blob/master/lib/config.ts#L76) in Protractor's `conf.js` file:
