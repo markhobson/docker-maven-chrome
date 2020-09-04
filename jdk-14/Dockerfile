@@ -4,14 +4,13 @@ FROM maven:3.6.3-jdk-14
 
 ARG CHROME_VERSION=85.0.4183.83-1
 ADD google-chrome.repo /etc/yum.repos.d/google-chrome.repo
-RUN yum-config-manager --enable ol7_optional_latest \
-	&& yum install -y google-chrome-stable-$CHROME_VERSION \
+RUN microdnf install -y google-chrome-stable-$CHROME_VERSION \
 	&& sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome
 
 # ChromeDriver
 
 ARG CHROME_DRIVER_VERSION=85.0.4183.87
-RUN yum install -y unzip \
+RUN microdnf install -y unzip \
 	&& curl -s -o /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
 	&& rm /tmp/chromedriver.zip \
