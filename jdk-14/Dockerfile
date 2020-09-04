@@ -10,7 +10,7 @@ RUN yum-config-manager --enable ol7_optional_latest \
 
 # ChromeDriver
 
-ARG CHROME_DRIVER_VERSION=84.0.4147.30
+ARG CHROME_DRIVER_VERSION=85.0.4183.87
 RUN yum install -y unzip \
 	&& curl -s -o /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
