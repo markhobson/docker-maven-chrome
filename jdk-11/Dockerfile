@@ -13,7 +13,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 
 # ChromeDriver
 
-ARG CHROME_DRIVER_VERSION=89.0.4389.23
+ARG CHROME_DRIVER_VERSION=90.0.4430.24
 RUN wget -q -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
 	&& rm /tmp/chromedriver.zip \
