@@ -15,11 +15,11 @@ Available on [Docker Hub](https://hub.docker.com/r/markhobson/maven-chrome/).
 
 The following Docker tags are available:
 
-* `jdk-8`, `latest` [(jdk-8/Dockerfile)](jdk-8/Dockerfile)
+* `jdk-8` [(jdk-8/Dockerfile)](jdk-8/Dockerfile)
 * `jdk-11` [(jdk-11/Dockerfile)](jdk-11/Dockerfile)
-* `jdk-16` [(jdk-16/Dockerfile)](jdk-16/Dockerfile)
+* `jdk-16`, `latest` [(jdk-16/Dockerfile)](jdk-16/Dockerfile)
 
-**Note: Please use `jdk-8` instead of `latest`, as `latest` will be switched to `jdk-16` soon.** See issue [#11](https://github.com/markhobson/docker-maven-chrome/issues/11) for more information.
+**Note: Until recently `latest` was `jdk-8`, please use `jdk-8` explicitly instead.** See issue [#11](https://github.com/markhobson/docker-maven-chrome/issues/11) for more information.
 
 ## Demo
 
