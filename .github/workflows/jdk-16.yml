@@ -24,7 +24,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./jdk-16
-          tags:
-            - markhobson/maven-chrome:jdk-16
-            - markhobson/maven-chrome:latest
+          tags: markhobson/maven-chrome:jdk-16,markhobson/maven-chrome:latest
           push: true
