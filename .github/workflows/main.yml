@@ -20,6 +20,6 @@ jobs:
       - name: Build and push JDK 8
         uses: docker/build-push-action@v2
         with:
-          context: jdk-8
+          context: ./jdk-8
           tags: markhobson/maven-chrome:jdk-8
           push: true
