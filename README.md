@@ -7,7 +7,7 @@ Includes:
 * JDK 8/11/16
 * Maven 3.8.1
 * Chrome 93
-* ChromeDriver 92
+* ChromeDriver 93
 
 Available on [Docker Hub](https://hub.docker.com/r/markhobson/maven-chrome/).
 
