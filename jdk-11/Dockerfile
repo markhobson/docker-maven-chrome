@@ -2,7 +2,7 @@ FROM maven:3.8.2-jdk-11
 
 # Google Chrome
 
-ARG CHROME_VERSION=94.0.4606.54-1
+ARG CHROME_VERSION=94.0.4606.61-1
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
 	&& echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
 	&& apt-get update -qqy \
