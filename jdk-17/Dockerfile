@@ -9,7 +9,7 @@ RUN microdnf install -y google-chrome-stable-$CHROME_VERSION \
 
 # ChromeDriver
 
-ARG CHROME_DRIVER_VERSION=97.0.4692.71
+ARG CHROME_DRIVER_VERSION=98.0.4758.48
 RUN microdnf install -y unzip \
 	&& curl -s -o /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
