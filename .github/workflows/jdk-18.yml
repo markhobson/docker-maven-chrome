@@ -1,9 +1,9 @@
-name: jdk-17
+name: jdk-18
 
 on:
   push:
     branches: [ master ]
-    paths: [ 'jdk-17/**' ]
+    paths: [ 'jdk-18/**' ]
   workflow_dispatch:
 
 jobs:
@@ -23,6 +23,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./jdk-17
-          tags: markhobson/maven-chrome:jdk-17
+          context: ./jdk-18
+          tags: markhobson/maven-chrome:jdk-18,markhobson/maven-chrome:latest
           push: true
