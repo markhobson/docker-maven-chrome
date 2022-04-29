@@ -20,8 +20,6 @@ The following Docker tags are available:
 * `jdk-17` [(jdk-17/Dockerfile)](jdk-17/Dockerfile)
 * `jdk-18`, `latest` [(jdk-18/Dockerfile)](jdk-18/Dockerfile)
 
-**Note: Until recently `latest` was `jdk-8`, please use `jdk-8` explicitly instead.** See issue [#11](https://github.com/markhobson/docker-maven-chrome/issues/11) for more information.
-
 ## Demo
 
 See the [demo](demo) Maven project to see how this Docker image can be used to run UI tests. To run the demo within the latest version of this image on Docker Hub:
