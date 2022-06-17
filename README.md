@@ -29,6 +29,14 @@ cd demo
 ./run.sh
 ```
 
+## Building
+
+To build and test the Docker images locally, install [Bats](https://bats-core.readthedocs.io/) and run:
+
+```bash
+./build.sh
+```
+
 ## Tips
 
 ### Using with Selenium
