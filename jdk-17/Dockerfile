@@ -2,7 +2,7 @@ FROM maven:3.8.5-openjdk-17
 
 # Google Chrome
 
-ARG CHROME_VERSION=103.0.5060.134-1
+ARG CHROME_VERSION=104.0.5112.79-1
 ADD google-chrome.repo /etc/yum.repos.d/google-chrome.repo
 RUN microdnf install -y google-chrome-stable-$CHROME_VERSION \
 	&& sed -i 's/"$HERE\/chrome"/"$HERE\/chrome" --no-sandbox/g' /opt/google/chrome/google-chrome
