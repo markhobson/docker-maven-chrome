@@ -2,7 +2,7 @@ name: jdk-17
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths: [ 'jdk-17/**' ]
   workflow_dispatch:
 

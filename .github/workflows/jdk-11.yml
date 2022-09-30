@@ -2,7 +2,7 @@ name: jdk-11
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths: [ 'jdk-11/**' ]
   workflow_dispatch:
 

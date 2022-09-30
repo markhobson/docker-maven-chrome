@@ -2,7 +2,7 @@ name: jdk-8
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths: [ 'jdk-8/**' ]
   workflow_dispatch:
 
