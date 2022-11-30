@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e -o pipefail
+
 VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
 
 ./set-arg.sh CHROME_DRIVER_VERSION $VERSION

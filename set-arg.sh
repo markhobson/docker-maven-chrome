@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e -o pipefail
+
 if [ $# -ne 2 ]
 then
 	echo "Usage: set-arg.sh <arg-name> <arg-value>"
