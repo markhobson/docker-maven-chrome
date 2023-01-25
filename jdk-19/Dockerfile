@@ -2,7 +2,7 @@ FROM maven:3.8.7-eclipse-temurin-19
 
 # Google Chrome
 
-ARG CHROME_VERSION=109.0.5414.74-1
+ARG CHROME_VERSION=109.0.5414.119-1
 RUN apt-get update -qqy \
 	&& apt-get -qqy install gpg unzip \
 	&& wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
