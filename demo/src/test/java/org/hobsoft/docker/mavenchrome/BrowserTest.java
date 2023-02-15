@@ -43,7 +43,7 @@ public class BrowserTest
 	public void setUp()
 	{
 		ChromeOptions options = new ChromeOptions()
-			.setHeadless(true);
+			.addArguments("--headless=new");
 		
 		driver = new ChromeDriver(options);
 	}

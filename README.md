@@ -36,7 +36,7 @@ cd demo
 Configure [Selenium](https://www.selenium.dev/) to launch Chrome in headless mode:
 
 ```java
-ChromeOptions options = new ChromeOptions().setHeadless(true);
+ChromeOptions options = new ChromeOptions().addArguments("--headless=new");
 WebDriver driver = new ChromeDriver(options);
 ```
 
