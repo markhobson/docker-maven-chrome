@@ -5,7 +5,7 @@ Docker image for Java automated UI tests.
 Includes:
 
 * JDK 8/11/17/19
-* Maven 3.8.7
+* Maven 3.9.0
 * Chrome 111.0.5563.110
 * ChromeDriver 111.0.5563.64
 
