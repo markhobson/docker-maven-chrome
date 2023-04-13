@@ -1,4 +1,4 @@
-FROM maven:3.9.0-eclipse-temurin-19
+FROM maven:3.9.0-eclipse-temurin-20
 
 # Google Chrome
 
