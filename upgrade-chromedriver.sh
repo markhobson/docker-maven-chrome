@@ -2,6 +2,12 @@
 
 set -e -o pipefail
 
+if [ $(git status --porcelain --untracked-files=no | wc -l) -ne 0 ]
+then
+  echo "Aborting: working directory has uncommitted changes"
+  exit 1
+fi
+
 VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
 
 ./set-arg.sh CHROME_DRIVER_VERSION $VERSION
