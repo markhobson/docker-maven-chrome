@@ -42,13 +42,13 @@ To build and test the Docker images locally, install [Bats](https://bats-core.re
 To upgrade the Docker images to use the latest version of Chrome, install [dctrl-tools](https://pkgs.org/download/dctrl-tools) and run:
 
 ```bash
-./upgrade-chrome.sh
+./upgrade.sh chrome
 ```
 
 To upgrade the Docker images to use the latest version of ChromeDriver:
 
 ```bash
-./upgrade-chromedriver.sh
+./upgrade.sh chromedriver
 ```
 
 Note that both of these scripts will also commit to Git.
