@@ -21,7 +21,7 @@ upgrade_chrome () {
 }
 
 upgrade_chromedriver () {
-  VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+  VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_STABLE)
 
   check_clean
   set_arg CHROME_DRIVER_VERSION $VERSION
