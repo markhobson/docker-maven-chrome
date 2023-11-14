@@ -62,8 +62,8 @@ public class BrowserTest
 	public void canDuck()
 	{
 		driver.get("https://duckduckgo.com/");
-		driver.findElement(By.id("search_form_input_homepage")).sendKeys("fish");
-		driver.findElement(By.id("search_button_homepage")).click();
+		driver.findElement(By.id("searchbox_input")).sendKeys("fish");
+		driver.findElement(By.cssSelector("button[type=submit]")).click();
 		
 		assertThat(driver.getTitle(), containsString("fish"));
 	}
