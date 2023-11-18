@@ -19,6 +19,7 @@ ARG CHROME_DRIVER_VERSION=119.0.6045.105
 RUN wget -q -O /tmp/chromedriver.zip https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/$CHROME_DRIVER_VERSION/linux64/chromedriver-linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
 	&& rm /tmp/chromedriver.zip \
-	&& mv /opt/chromedriver /opt/chromedriver-$CHROME_DRIVER_VERSION \
+	&& mv /opt/chromedriver-linux64 /opt/chromedriver-$CHROME_DRIVER_VERSION \
 	&& chmod 755 /opt/chromedriver-$CHROME_DRIVER_VERSION \
 	&& ln -s /opt/chromedriver-$CHROME_DRIVER_VERSION /usr/bin/chromedriver
+ENV PATH="$PATH:/usr/bin/chromedriver"
