@@ -17,7 +17,7 @@ TAG=jdk-11 bats test
 docker build --pull -t maven-chrome:jdk-17 jdk-17
 TAG=jdk-17 bats test
 
-# jdk-20
+# jdk-21
 
-docker build --pull -t maven-chrome:jdk-20 -t maven-chrome jdk-20
-TAG=jdk-20 bats test
+docker build --pull -t maven-chrome:jdk-21 -t maven-chrome jdk-21
+TAG=jdk-21 bats test
