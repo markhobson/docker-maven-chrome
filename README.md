@@ -6,7 +6,7 @@ Includes:
 
 * JDK 8/11/17/21
 * Maven 3.9.6
-* Chrome 123.0.6312.105
+* Chrome 124.0.6367.91
 * ChromeDriver 123.0.6312.86
 
 Available on [Docker Hub](https://hub.docker.com/r/markhobson/maven-chrome/).
