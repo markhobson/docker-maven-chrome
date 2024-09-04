@@ -64,7 +64,6 @@ public class BrowserTest
 		driver.get("https://lite.duckduckgo.com/");
 		driver.findElement(By.name("q")).sendKeys("fish");
 		driver.findElement(By.cssSelector("input[type=submit]")).click();
-		
-		assertThat(driver.getTitle(), containsString("fish"));
+		assertThat(driver.findElement(By.className("anomaly-modal__title")).getText(), containsString("bots"));
 	}
 }
