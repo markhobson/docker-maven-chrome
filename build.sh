@@ -2,11 +2,6 @@
 
 set -e -o pipefail
 
-# jdk-8
-
-docker build --pull -t maven-chrome:jdk-8 jdk-8
-TAG=jdk-8 bats test
-
 # jdk-11
 
 docker build --pull -t maven-chrome:jdk-11 jdk-11

@@ -33,35 +33,14 @@
 	
 	<build>
 
-		<pluginManagement>
-
-			<plugins>
-
-				<!-- Downgrade Checkstyle for Java 8 -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-checkstyle-plugin</artifactId>
-					<dependencies>
-						<dependency>
-							<groupId>com.puppycrawl.tools</groupId>
-							<artifactId>checkstyle</artifactId>
-							<version>9.3</version>
-						</dependency>
-					</dependencies>
-				</plugin>
-
-			</plugins>
-
-		</pluginManagement>
-		
 		<plugins>
 			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 			
@@ -82,7 +61,7 @@
 			<dependency>
 				<groupId>org.seleniumhq.selenium</groupId>
 				<artifactId>selenium-java</artifactId>
-				<version>4.13.0</version>
+				<version>4.25.0</version>
 			</dependency>
 			
 		</dependencies>
