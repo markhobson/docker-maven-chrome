@@ -39,8 +39,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<release>11</release>
+					<compilerArgs>
+						<compilerArg>-parameters</compilerArg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 			
@@ -53,15 +55,19 @@
 		<dependencies>
 			
 			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.13.1</version>
+				<groupId>org.seleniumhq.selenium</groupId>
+				<artifactId>selenium-bom</artifactId>
+				<version>4.25.0</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 			
 			<dependency>
-				<groupId>org.seleniumhq.selenium</groupId>
-				<artifactId>selenium-java</artifactId>
-				<version>4.25.0</version>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.7.18</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 			
 		</dependencies>
@@ -71,8 +77,13 @@
 	<dependencies>
 		
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		

@@ -13,20 +13,23 @@
  */
 package org.hobsoft.docker.mavenchrome;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.server.LocalServerPort;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Tests that Selenium can run on Chrome.
  */
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class BrowserTest
 {
 	// ----------------------------------------------------------------------------------------------------------------
@@ -35,11 +38,14 @@ public class BrowserTest
 	
 	private WebDriver driver;
 	
+	@LocalServerPort
+	private int port;
+	
 	// ----------------------------------------------------------------------------------------------------------------
 	// JUnit methods
 	// ----------------------------------------------------------------------------------------------------------------
 	
-	@Before
+	@BeforeEach
 	public void setUp()
 	{
 		ChromeOptions options = new ChromeOptions()
@@ -48,7 +54,7 @@ public class BrowserTest
 		driver = new ChromeDriver(options);
 	}
 	
-	@After
+	@AfterEach
 	public void tearDown()
 	{
 		driver.close();
@@ -59,12 +65,12 @@ public class BrowserTest
 	// ----------------------------------------------------------------------------------------------------------------
 	
 	@Test
-	public void canDuck()
+	public void canGreet()
 	{
-		driver.get("https://lite.duckduckgo.com/");
-		driver.findElement(By.name("q")).sendKeys("fish");
-		driver.findElement(By.cssSelector("input[type=submit]")).click();
+		driver.get(String.format("http://localhost:%d", port));
+		driver.findElement(By.name("name")).sendKeys("world");
+		driver.findElement(By.tagName("button")).click();
 		
-		assertThat(driver.getTitle(), containsString("fish"));
+		assertEquals(driver.findElement(By.tagName("h1")).getText(), "Hello world");
 	}
 }
