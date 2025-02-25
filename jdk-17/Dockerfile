@@ -15,7 +15,7 @@ RUN apt-get update -qqy \
 
 # ChromeDriver
 
-ARG CHROME_DRIVER_VERSION=131.0.6778.85
+ARG CHROME_DRIVER_VERSION=133.0.6943.141
 RUN wget -q -O /tmp/chromedriver.zip https://storage.googleapis.com/chrome-for-testing-public/$CHROME_DRIVER_VERSION/linux64/chromedriver-linux64.zip \
 	&& unzip /tmp/chromedriver.zip -d /opt \
 	&& rm /tmp/chromedriver.zip \
