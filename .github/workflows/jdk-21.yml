@@ -3,7 +3,9 @@ name: jdk-21
 on:
   push:
     branches: [ main ]
-    paths: [ 'jdk-21/**' ]
+    paths:
+      - '.github/workflows/jdk-21.yml'
+      - 'jdk-21/**'
   workflow_dispatch:
 
 jobs:

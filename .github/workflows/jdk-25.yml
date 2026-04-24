@@ -3,7 +3,9 @@ name: jdk-25
 on:
   push:
     branches: [ main ]
-    paths: [ 'jdk-25/**' ]
+    paths:
+      - '.github/workflows/jdk-25.yml'
+      - 'jdk-25/**'
   workflow_dispatch:
 
 jobs:

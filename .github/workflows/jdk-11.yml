@@ -3,7 +3,9 @@ name: jdk-11
 on:
   push:
     branches: [ main ]
-    paths: [ 'jdk-11/**' ]
+    paths:
+      - '.github/workflows/jdk-11.yml'
+      - 'jdk-11/**'
   workflow_dispatch:
 
 jobs:

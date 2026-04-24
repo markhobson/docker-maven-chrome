@@ -3,7 +3,9 @@ name: jdk-17
 on:
   push:
     branches: [ main ]
-    paths: [ 'jdk-17/**' ]
+    paths:
+      - '.github/workflows/jdk-17.yml'
+      - 'jdk-17/**'
   workflow_dispatch:
 
 jobs:
