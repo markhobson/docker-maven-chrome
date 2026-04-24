@@ -1,9 +1,9 @@
-name: jdk-21
+name: jdk-25
 
 on:
   push:
     branches: [ main ]
-    paths: [ 'jdk-21/**' ]
+    paths: [ 'jdk-25/**' ]
   workflow_dispatch:
 
 jobs:
@@ -23,6 +23,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./jdk-21
-          tags: markhobson/maven-chrome:jdk-21
+          context: ./jdk-25
+          tags: markhobson/maven-chrome:jdk-25,markhobson/maven-chrome:latest
           push: true
